@@ -8,7 +8,8 @@ ON bookings.user_id = users.user_id;
 SELECT *
 FROM Properties
 LEFT JOIN Reviews
-ON Properties.property_id = Reviews.property_id;
+ON Properties.property_id = Reviews.property_id
+ORDER BY DESC;
 
 SELECT *
 FROM users
