@@ -28,9 +28,6 @@ JOIN
 LEFT JOIN 
     payments pay ON b.booking_id = pay.booking_id;
 
-WHERE
-AND 
-
 -- Optimized query in performance.sql
 
 -- Ensure indexes (execute once in your DB)
