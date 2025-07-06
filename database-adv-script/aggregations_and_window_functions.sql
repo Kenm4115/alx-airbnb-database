@@ -1,7 +1,7 @@
 
 SELECT COUNT(user_id) AS BK_COUNT
 FROM bookings
-Group BY user_id
+GROUP BY user_id
 ORDER BY BK_COUNT;
 
 SELECT 
