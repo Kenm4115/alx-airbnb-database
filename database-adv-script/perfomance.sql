@@ -17,16 +17,15 @@ SELECT
     pay.payment_date
 
 FROM 
-    bookings b
-
-JOIN 
-    users u ON b.user_id = u.user_id
-
-JOIN 
-    properties p ON b.property_id = p.property_id
-
+    Bookings b,
+    Users u,
+    Properties p
 LEFT JOIN 
-    payments pay ON b.booking_id = pay.booking_id;
+    Payments pay ON b.booking_id = pay.booking_id
+
+WHERE 
+    b.user_id = u.user_id
+    AND b.property_id = p.property_id;
 
 -- Optimized query in performance.sql
 
@@ -50,10 +49,12 @@ SELECT
     pay.status
 
 FROM 
-    bookings b
-JOIN 
-    users u ON b.user_id = u.user_id
-JOIN 
-    properties p ON b.property_id = p.property_id
+    Bookings b,
+    Users u,
+    Properties p
 LEFT JOIN 
-    payments pay ON b.booking_id = pay.booking_id;
+    Payments pay ON b.booking_id = pay.booking_id
+
+WHERE 
+    b.user_id = u.user_id
+    AND b.property_id = p.property_id;
